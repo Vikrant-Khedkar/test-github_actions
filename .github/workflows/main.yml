@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Create Pull Request
-        uses: 'https://github.com/peter-evans/create-pull-request@v4'
+        uses: 'peter-evans/create-pull-request@v4'
         with:
           branch: dev
           commit-message: Automated Pull Request
