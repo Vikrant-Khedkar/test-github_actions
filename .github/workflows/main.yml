@@ -6,12 +6,12 @@ on:
       - master
 
 jobs:
-  create-pull-request:
+   create-pull-request:
     runs-on: ubuntu-latest
     steps:
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v4
+      - uses: peter-evans/create-pull-request@v4
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           branch: dev
-          commit-message: Automated Pull Request
           title: Automated Pull Request
+          body: Automated Pull Request
